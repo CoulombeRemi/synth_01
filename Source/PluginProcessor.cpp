@@ -24,6 +24,15 @@ Synth_01AudioProcessor::Synth_01AudioProcessor()
                        )
 #endif
 {
+	mySynth.clearVoices();
+
+	// nombre de voices qu'on veut. ici 5
+	for (int i = 0; i < 5; i++){
+		mySynth.addVoice(new SynthVoice());
+	}
+
+	mySynth.clearSounds();
+	mySynth.addSound(new SynthSound());
 }
 
 Synth_01AudioProcessor::~Synth_01AudioProcessor()
@@ -97,6 +106,12 @@ void Synth_01AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+
+	// ignore les samples precedent
+	ignoreUnused(samplesPerBlock);
+	// lastSampleRate créé dans .h
+	lastSampleRate = sampleRate;
+	mySynth.setCurrentPlaybackSampleRate(lastSampleRate);
 }
 
 void Synth_01AudioProcessor::releaseResources()
