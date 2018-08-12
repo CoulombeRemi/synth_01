@@ -146,7 +146,9 @@ bool Synth_01AudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts)
 
 void Synth_01AudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
-    ScopedNoDenormals noDenormals;
+	buffer.clear(); 
+	mySynth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
+   /* ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
@@ -170,7 +172,7 @@ void Synth_01AudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffe
         auto* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
-    }
+    }*/
 }
 
 //==============================================================================
