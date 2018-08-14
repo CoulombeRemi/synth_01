@@ -12,6 +12,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "SynthSound.h"
+#include "maximilian.h"
 
 //https://docs.juce.com/master/classSynthesiserVoice.html
 

@@ -4,6 +4,29 @@
               pluginCharacteristicsValue="pluginIsSynth,pluginProducesMidiOut,pluginWantsMidiIn">
   <MAINGROUP id="XENdjo" name="synth_01">
     <GROUP id="{E4ACDB0F-D79B-AD20-2FD7-AFD1D433A024}" name="Source">
+      <GROUP id="{6CBF5429-B393-CE33-FEAB-23250C86D7FC}" name="Maximilian">
+        <GROUP id="{49BDD52C-D6BC-A6E8-1E0D-6BBB03CE14DE}" name="libs">
+          <FILE id="vYZodB" name="fft.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/fft.cpp"/>
+          <FILE id="TqR0fh" name="fft.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/fft.h"/>
+          <FILE id="pjjg3C" name="maxiAtoms.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiAtoms.cpp"/>
+          <FILE id="MHqnpV" name="maxiAtoms.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiAtoms.h"/>
+          <FILE id="vGK4Gb" name="maxiBark.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiBark.cpp"/>
+          <FILE id="oThvHs" name="maxiBark.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiBark.h"/>
+          <FILE id="Ap5RM9" name="maxiFFT.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiFFT.cpp"/>
+          <FILE id="Cp8CoQ" name="maxiFFT.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiFFT.h"/>
+          <FILE id="gd0v73" name="maxiGrains.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiGrains.cpp"/>
+          <FILE id="ZaHOu4" name="maxiGrains.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiGrains.h"/>
+          <FILE id="kWSdUz" name="maxim.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxim.h"/>
+          <FILE id="lThbCZ" name="maxiMFCC.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiMFCC.cpp"/>
+          <FILE id="skkwzT" name="maxiMFCC.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/maxiMFCC.h"/>
+          <FILE id="dp6qcG" name="sineTable.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/libs/sineTable.h"/>
+        </GROUP>
+        <FILE id="RKmj0n" name="main.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/main.cpp"/>
+        <FILE id="T92wIm" name="maximilian.cpp" compile="1" resource="0" file="../../JUCE_lib/Maximilian/maximilian.cpp"/>
+        <FILE id="IRxZWV" name="maximilian.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/maximilian.h"/>
+        <FILE id="GV87yd" name="stb_vorbis.c" compile="1" resource="0" file="../../JUCE_lib/Maximilian/stb_vorbis.c"/>
+        <FILE id="ri7T95" name="stb_vorbis.h" compile="0" resource="0" file="../../JUCE_lib/Maximilian/stb_vorbis.h"/>
+      </GROUP>
       <FILE id="ojxTMr" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="RLAZj2" name="PluginProcessor.h" compile="0" resource="0"
@@ -18,7 +41,7 @@
   <EXPORTFORMATS>
     <VS2017 targetFolder="Builds/VisualStudio2017">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="D:\JUCE_lib\Maximilian"/>
         <CONFIGURATION isDebug="0" name="Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
